@@ -71,266 +71,241 @@ def run_example():
     conclusion = "konkluzja(wybór pizzy):"
     main_premises = list(premises.keys())
 
-
     """"" Binary tree: N - node, R - right, L - left (L and R means the direction of movement in the tree) """
 
     """ LEVEL 0 """
 
     N = BinaryTreeElement(one_hundred_examples, conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(N, position_x=800, position_y=0)
+                          option_of_conclusion, window)
 
     """ LEVEL 1 """
 
     L = BinaryTreeElement(N.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(L, position_x=200, position_y=50)
+                          option_of_conclusion, window)
     R = BinaryTreeElement(N.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
+                          option_of_conclusion, window)
 
     """ LEVEL 2 """
 
-    place_the_item_in_a_tree(R, position_x=1100, position_y=50)
     LL = BinaryTreeElement(L.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LL, position_x=100, position_y=100)
+                           option_of_conclusion, window)
+
     LR = BinaryTreeElement(L.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LR, position_x=290, position_y=100)
+                           option_of_conclusion, window)
+
     RR = BinaryTreeElement(R.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RR, position_x=1400, position_y=100)
+                           option_of_conclusion, window)
+
     RL = BinaryTreeElement(R.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RL, position_x=900, position_y=100)
+                           option_of_conclusion, window)
 
     """ LEVEL 3 """
 
     LRL = BinaryTreeElement(LR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRL, position_x=250, position_y=150)
+                            option_of_conclusion, window)
+
     LRR = BinaryTreeElement(LR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRR, position_x=400, position_y=150)
+                            option_of_conclusion, window)
+
     RLL = BinaryTreeElement(RL.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RLL, position_x=850, position_y=150)
+                            option_of_conclusion, window)
+
     RLR = BinaryTreeElement(RL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RLR, position_x=950, position_y=150)
+                            option_of_conclusion, window)
+
     RRL = BinaryTreeElement(RR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRL, position_x=1350, position_y=150)
+                            option_of_conclusion, window)
+
     RRR = BinaryTreeElement(RR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRR, position_x=1520, position_y=150)
+                            option_of_conclusion, window)
 
     """ LEVEL 4 """
 
     LRRL = BinaryTreeElement(LRR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRL, position_x=200, position_y=200)
+                             option_of_conclusion, window)
+
     LRRR = BinaryTreeElement(LRR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRR, position_x=600, position_y=200)
+                             option_of_conclusion, window)
+
     RLRL = BinaryTreeElement(RLR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RLRL, position_x=900, position_y=200)
+                             option_of_conclusion, window)
+
     RLRR = BinaryTreeElement(RLR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RLRR, position_x=960, position_y=200)
+                             option_of_conclusion, window)
+
     RRLL = BinaryTreeElement(RRL.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRLL, position_x=1300, position_y=200)
+                             option_of_conclusion, window)
+
     RRLR = BinaryTreeElement(RRL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRLR, position_x=1420, position_y=200)
+                             option_of_conclusion, window)
+
     RRRL = BinaryTreeElement(RRR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRL, position_x=1500, position_y=200)
+                             option_of_conclusion, window)
+
     RRRR = BinaryTreeElement(RRR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRR, position_x=1630, position_y=200)
+                             option_of_conclusion, window)
 
     """ LEVEL 5 """
 
-    LRRLL = BinaryTreeElement(LRRL.return_left_branch(), conclusion,main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRLL, position_x=150, position_y=250)
+    LRRLL = BinaryTreeElement(LRRL.return_left_branch(), conclusion, main_premises, option_of_premises,
+                              option_of_conclusion, window)
+
     LRRLR = BinaryTreeElement(LRRL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRLR, position_x=320, position_y=250)
+                              option_of_conclusion, window)
+
     LRRRL = BinaryTreeElement(LRRR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRRL, position_x=450, position_y=250)
+                              option_of_conclusion, window)
+
     LRRRR = BinaryTreeElement(LRRR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRRR, position_x=640, position_y=250)
+                              option_of_conclusion, window)
+
     RLRRL = BinaryTreeElement(RLRR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RLRRL, position_x=800, position_y=250)
+                              option_of_conclusion, window)
+
     RLRRR = BinaryTreeElement(RLRR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RLRRR, position_x=1000, position_y=250)
+                              option_of_conclusion, window)
+
     RRLLL = BinaryTreeElement(RRLL.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRLLL, position_x=1200, position_y=250)
+                              option_of_conclusion, window)
+
     RRLLR = BinaryTreeElement(RRLL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRLLR, position_x=1330, position_y=250)
+                              option_of_conclusion, window)
+
     RRLRL = BinaryTreeElement(RRLR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRLRL, position_x=1385, position_y=250)
+                              option_of_conclusion, window)
+
     RRLRR = BinaryTreeElement(RRLR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRLRR, position_x=1440, position_y=250)
+                              option_of_conclusion, window)
+
     RRRRL = BinaryTreeElement(RRRR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRRL, position_x=1570, position_y=250)
+                              option_of_conclusion, window)
+
     RRRRR = BinaryTreeElement(RRRR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRRR, position_x=1730, position_y=250)
+                              option_of_conclusion, window)
 
     """ LEVEL 6 """
 
     LRRLLL = BinaryTreeElement(LRRLL.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRLLL, position_x=120, position_y=300)
+                               option_of_conclusion, window)
+
     LRRLLR = BinaryTreeElement(LRRLL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRLLR, position_x=180, position_y=300)
+                               option_of_conclusion, window)
+
     LRRRLL = BinaryTreeElement(LRRRL.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRRLL, position_x=370, position_y=300)
+                               option_of_conclusion, window)
+
     LRRRLR = BinaryTreeElement(LRRRL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRRLR, position_x=530, position_y=300)
+                               option_of_conclusion, window)
+
     LRRRRL = BinaryTreeElement(LRRRR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRRRL, position_x=570, position_y=300)
+                               option_of_conclusion, window)
+
     LRRRRR = BinaryTreeElement(LRRRR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRRRR, position_x=700, position_y=300)
+                               option_of_conclusion, window)
     RLRRLL = BinaryTreeElement(RLRRL.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RLRRLL, position_x=765, position_y=300)
+                               option_of_conclusion, window)
     RLRRLR = BinaryTreeElement(RLRRL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RLRRLR, position_x=850, position_y=300)
+                               option_of_conclusion, window)
     RLRRRL = BinaryTreeElement(RLRRR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RLRRRL, position_x=950, position_y=300)
+                               option_of_conclusion, window)
     RLRRRR = BinaryTreeElement(RLRRR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RLRRRR, position_x=1060, position_y=300)
+                               option_of_conclusion, window)
     RRLLLL = BinaryTreeElement(RRLLL.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRLLLL, position_x=1150, position_y=300)
+                               option_of_conclusion, window)
     RRLLLR = BinaryTreeElement(RRLLL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRLLLR, position_x=1220, position_y=300)
+                               option_of_conclusion, window)
     RRLRRL = BinaryTreeElement(RRLRR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRLRRL, position_x=1340, position_y=300)
+                               option_of_conclusion, window)
     RRLRRR = BinaryTreeElement(RRLRR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRLRRR, position_x=1450, position_y=300)
+                               option_of_conclusion, window)
     RRRRLL = BinaryTreeElement(RRRRL.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRRLL, position_x=1560, position_y=300)
+                               option_of_conclusion, window)
     RRRRLR = BinaryTreeElement(RRRRL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRRLR, position_x=1660, position_y=300)
+                               option_of_conclusion, window)
     RRRRRL = BinaryTreeElement(RRRRR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRRRL, position_x=1710, position_y=300)
+                               option_of_conclusion, window)
     RRRRRR = BinaryTreeElement(RRRRR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRRRR, position_x=1790, position_y=300)
+                               option_of_conclusion, window)
 
     """ LEVEL 7 """
 
     LRRLLLL = BinaryTreeElement(LRRLLL.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRLLLL, position_x=80, position_y=350)
+                                option_of_conclusion, window)
     LRRLLLR = BinaryTreeElement(LRRLLL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRLLLR, position_x=140, position_y=350)
+                                option_of_conclusion, window)
     LRRRLLL = BinaryTreeElement(LRRRLL.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRRLLL, position_x=350, position_y=350)
+                                option_of_conclusion, window)
     LRRRLLR = BinaryTreeElement(LRRRLL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRRLLR, position_x=400, position_y=350)
+                                option_of_conclusion, window)
     LRRRRLL = BinaryTreeElement(LRRRRL.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRRRLL, position_x=500, position_y=350)
+                                option_of_conclusion, window)
     LRRRRLR = BinaryTreeElement(LRRRRL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(LRRRRLR, position_x=660, position_y=350)
+                                option_of_conclusion, window)
     RLRRLRL = BinaryTreeElement(RLRRLR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RLRRLRL, position_x=780, position_y=350)
+                                option_of_conclusion, window)
     RLRRLRR = BinaryTreeElement(RLRRLR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RLRRLRR, position_x=890, position_y=350)
+                                option_of_conclusion, window)
     RLRRRRL = BinaryTreeElement(RLRRRR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RLRRRRL, position_x=1000, position_y=350)
+                                option_of_conclusion, window)
     RLRRRRR = BinaryTreeElement(RLRRRR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RLRRRRR, position_x=1100, position_y=350)
+                                option_of_conclusion, window)
     RRLLLRL = BinaryTreeElement(RRLLLR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRLLLRL, position_x=1180, position_y=350)
+                                option_of_conclusion, window)
     RRLLLRR = BinaryTreeElement(RRLLLR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRLLLRR, position_x=1250, position_y=350)
+                                option_of_conclusion, window)
     RRLRRLL = BinaryTreeElement(RRLRRL.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRLRRLL, position_x=1320, position_y=350)
+                                option_of_conclusion, window)
     RRLRRLR = BinaryTreeElement(RRLRRL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRLRRLR, position_x=1380, position_y=350)
+                                option_of_conclusion, window)
     RRLRRRL = BinaryTreeElement(RRLRRR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRLRRRL, position_x=1440, position_y=350)
+                                option_of_conclusion, window)
     RRLRRRR = BinaryTreeElement(RRLRRR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRLRRRR, position_x=1500, position_y=350)
+                                option_of_conclusion, window)
     RRRRLLL = BinaryTreeElement(RRRRLL.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRRLLL, position_x=1550, position_y=350)
+                                option_of_conclusion, window)
     RRRRLLR = BinaryTreeElement(RRRRLL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRRLLR, position_x=1600, position_y=350)
+                                option_of_conclusion, window)
     RRRRRLL = BinaryTreeElement(RRRRRL.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRRRLL, position_x=1650, position_y=350)
+                                option_of_conclusion, window)
     RRRRRLR = BinaryTreeElement(RRRRRL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRRRLR, position_x=1737, position_y=350)
+                                option_of_conclusion, window)
     RRRRRRL = BinaryTreeElement(RRRRRR.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRRRRL, position_x=1785, position_y=350)
+                                option_of_conclusion, window)
     RRRRRRR = BinaryTreeElement(RRRRRR.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRRRRR, position_x=1860, position_y=350)
+                                option_of_conclusion, window)
 
     """ LEVEL 8 """
 
     RRRRRRLL = BinaryTreeElement(RRRRRRL.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRRRRLL, position_x=1750, position_y=400)
+                                 option_of_conclusion, window)
     RRRRRRLR = BinaryTreeElement(RRRRRRL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRRRRLR, position_x=1820, position_y=400)
+                                 option_of_conclusion, window)
     RRRRRLLL = BinaryTreeElement(RRRRRLL.return_left_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRRRLLL, position_x=1600, position_y=400)
+                                 option_of_conclusion, window)
     RRRRRLLR = BinaryTreeElement(RRRRRLL.return_right_branch(), conclusion, main_premises, option_of_premises,
-                                    option_of_conclusion, window)
-    place_the_item_in_a_tree(RRRRRLLR, position_x=1700, position_y=400)
+                                 option_of_conclusion, window)
+
+    leaves = ((N, 800, 0), (L, 200, 50), (R, 1100, 50), (LL, 100, 100), (LR, 290, 100), (RR, 1400, 100),
+              (RL, 900, 100), (LRL, 250, 150), (LRR, 400, 150), (RLL, 850, 150), (RLR, 950, 150), (RRL, 1350, 150),
+              (RRR, 1520, 150), (LRRL, 200, 200), (LRRR, 600, 200), (RLRL, 900, 200), (RLRR, 960, 200),
+              (RRLL, 1300, 200), (RRLR, 1420, 200), (RRRL, 1500, 200), (RRRR, 1630, 200), (LRRLL, 150, 250),
+              (LRRLR, 320, 250), (LRRRL, 450, 250), (LRRRR, 640, 250), (RLRRL, 800, 250), (RLRRR, 1000, 250),
+              (RRLLL, 1200, 250), (RRLLR, 1330, 250), (RRLRL, 1385, 250), (RRLRR, 1440, 250), (RRRRL, 1570, 250),
+              (RRRRR, 1730, 250), (LRRLLL, 120, 300), (LRRLLR, 180, 300), (LRRRLL, 370, 300), (LRRRLR, 530, 300),
+              (LRRRRL, 570, 300), (LRRRRR, 700, 300), (RLRRLL, 765, 300), (RLRRLR, 850, 300), (RLRRRL, 950, 300),
+              (RLRRRR, 1060, 300), (RRLLLL, 1150, 300), (RRLLLR, 1220, 300), (RRLRRL, 1340, 300), (RRLRRR, 1450, 300),
+              (RRRRLL, 1560, 300), (RRRRLR, 1660, 300), (RRRRRL, 1710, 300), (RRRRRR, 1790, 300), (LRRLLLL, 80, 350),
+              (LRRLLLR, 140, 350), (LRRRLLL, 350, 350), (LRRRLLR, 400, 350), (LRRRRLL, 500, 350), (LRRRRLR, 660, 350),
+              (RLRRLRL, 780, 350), (RLRRLRR, 890, 350), (RLRRRRL, 1000, 350), (RLRRRRR, 1100, 350),
+              (RRLLLRL, 1180, 350), (RRLLLRR, 1250, 350), (RRLRRLL, 1320, 350), (RRLRRLR, 1380, 350),
+              (RRLRRRL, 1440, 350), (RRLRRRR, 1500, 350), (RRRRLLL, 1550, 350), (RRRRLLR, 1600, 350),
+              (RRRRRLL, 1650, 350), (RRRRRLR, 1737, 350), (RRRRRRL, 1785, 350), (RRRRRRR, 1860, 350),
+              (RRRRRRLL, 1750, 400), (RRRRRRLR, 1820, 400), (RRRRRLLL, 1600, 400), (RRRRRLLR, 1700, 400))
+
+    for leave in leaves:
+        place_the_item_in_a_tree(leave[0], leave[1], leave[2])
+
+
 
     """ Legend for the binary tree"""
 
@@ -352,6 +327,7 @@ def run_example():
     #                                         option_of_premises, option_of_conclusion, window)
     # place_the_item_in_a_tree(left_left_left_leaf, position_x=800, position_y=500)
     window.mainloop()
+
 
 if __name__ == "__main__":
     run_example()
