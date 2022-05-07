@@ -169,13 +169,13 @@ class BinaryTreeElement:
     def draw_element_on_tree(self, position_x: int, position_y: int) -> None:
         try:
             position_no = len(str(self.return_best_main_premise())) + len(str(self.find_best_entropy()))
-            position_no = position_x + position_no * 4
+            position_no = position_x + position_no * 8
             position_yes = len(str(self.return_best_main_premise())) + len(str(self.find_best_entropy()))
             position_yes = position_x - position_yes
-            label_no = Label(self.window, text="NIE", font=("Times New Roman", 8))
-            label_yes = Label(self.window, text="TAK", font=("Times New Roman", 8))
+            label_no = Label(self.window, text="NIE", font=("Times New Roman", 12))
+            label_yes = Label(self.window, text="TAK", font=("Times New Roman", 12))
             label_node = Label(self.window, text=f"{self.return_best_main_premise()} {self.find_best_entropy()}",
-                           justify="center", font=("Times New Roman", 10))
+                           justify="center", font=("Times New Roman", 18))
             label_node.place(x=position_x, y=position_y)
             if len(self.return_best_main_premise()) > 0:
                 label_no.place(x=position_no, y=position_y + 30)
